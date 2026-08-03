@@ -1,0 +1,413 @@
+<title>Matt Bernstein · CV</title>
+<style>
+  :root {
+    --ink: #1e242f;
+    --ink-soft: #565b68;
+    --ink-faint: #838791;
+    --paper: #f5f3ee;
+    --accent: #2c5c53;
+    --hairline: #d9d3c4;
+    --hairline-strong: #b9b19c;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #eae7e0;
+      --ink-soft: #aba8a0;
+      --ink-faint: #7d7a74;
+      --paper: #15181c;
+      --accent: #7bb3a4;
+      --hairline: #2c3036;
+      --hairline-strong: #3c4149;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #eae7e0;
+    --ink-soft: #aba8a0;
+    --ink-faint: #7d7a74;
+    --paper: #15181c;
+    --accent: #7bb3a4;
+    --hairline: #2c3036;
+    --hairline-strong: #3c4149;
+  }
+  :root[data-theme="light"] {
+    --ink: #1e242f;
+    --ink-soft: #565b68;
+    --ink-faint: #838791;
+    --paper: #f5f3ee;
+    --accent: #2c5c53;
+    --hairline: #d9d3c4;
+    --hairline-strong: #b9b19c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 56px 80px;
+  }
+
+  /* ---------- Header ---------- */
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--hairline-strong);
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 0.3px;
+    margin: 0;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .role-line {
+    font-size: 15px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  .contact-line {
+    font-size: 13px;
+    color: var(--ink-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .contact-line span:not(:last-child)::after {
+    content: "·";
+    margin-left: 10px;
+    color: var(--ink-faint);
+  }
+
+  .contact-line a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* ---------- Sections ---------- */
+
+  section {
+    margin-bottom: 34px;
+  }
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--hairline-strong);
+  }
+
+  .summary {
+    color: var(--ink);
+    max-width: 62ch;
+  }
+
+  /* ---------- Experience ---------- */
+
+  .entry {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    column-gap: 20px;
+    margin-bottom: 22px;
+  }
+
+  .entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry-date {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    padding-top: 3px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .entry-title {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 15px;
+  }
+
+  .entry-org {
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  .entry-org a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline-strong);
+  }
+
+  .entry-org a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .entry-minor {
+    margin-bottom: 14px;
+  }
+
+  .entry-minor .entry-date {
+    font-size: 11.5px;
+    color: var(--ink-faint);
+  }
+
+  .entry-minor .entry-title {
+    font-weight: 500;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .entry-minor .entry-blurb {
+    font-size: 12.5px;
+    margin: 2px 0 6px;
+  }
+
+  .entry.entry-minor ul {
+    margin-top: 4px;
+  }
+
+  .entry.entry-minor li {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-bottom: 3px;
+  }
+
+  .entry-blurb {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    font-style: italic;
+    margin: 3px 0 8px;
+  }
+
+  .entry ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+  }
+
+  .entry li {
+    margin-bottom: 5px;
+    color: var(--ink);
+  }
+
+  .entry li:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry li::marker {
+    color: var(--accent);
+  }
+
+  .entry li a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--hairline-strong);
+  }
+
+  .entry li a:hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+
+  /* ---------- Education ---------- */
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  .edu-school {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .edu-degree {
+    color: var(--ink-soft);
+  }
+
+  .edu-date {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .entry ul.edu-list {
+    margin-top: 6px;
+  }
+
+  /* ---------- Skills ---------- */
+
+  .skills h2 {
+    color: var(--ink-faint);
+    border-bottom-color: var(--hairline);
+  }
+
+  .skills p {
+    margin: 0;
+    color: var(--ink-faint);
+    font-size: 12.5px;
+  }
+
+  @media print {
+    body { background: #fff; line-height: 1.4; }
+    .sheet { max-width: none; padding: 0.22in 0.55in; }
+    @page { size: letter; margin: 0; }
+    header { margin-bottom: 18px; }
+    section { margin-bottom: 14px; }
+    h2 { margin-bottom: 8px; padding-bottom: 5px; }
+    .entry { margin-bottom: 11px; }
+    .entry.entry-minor { margin-bottom: 8px; }
+    .entry ul { margin-top: 4px; }
+    .entry li { margin-bottom: 2px; }
+  }
+
+  @media (max-width: 560px) {
+    .sheet { padding: 40px 24px 56px; }
+    .entry { grid-template-columns: 1fr; row-gap: 4px; }
+    header { gap: 16px; }
+    .avatar { width: 68px; height: 68px; }
+    h1 { font-size: 32px; }
+  }
+</style>
+
+<div class="sheet">
+
+  <header>
+    <img class="avatar" src="headshot.jpg" alt="Matt Bernstein">
+    <div class="header-text">
+      <h1>Matt Bernstein</h1>
+      <div class="role-line">Staff Product Manager, AI · Intuit</div>
+      <div class="contact-line">
+        <span><a href="mailto:mbernstein07@gmail.com">mbernstein07@gmail.com</a></span>
+        <span><a href="https://www.linkedin.com/in/matt-bernstein-0b46b652/">LinkedIn</a></span>
+        <span><a href="matt-bernstein-resume.pdf?v=5">Download PDF</a></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Highly motivated product manager with generalist and specialist capabilities who turns ambiguous, high-scale problems into shippable solutions. Leverages an inclusive operating style, incisive use of analytics, and sound judgment to drive cross-functional solutions in complex technical environments. Trusted partner to engineering, UX, and business teams. Above all, a customer advocate.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-date">Sep 2024 – Present</div>
+      <div>
+        <div class="entry-title">Staff Product Manager, AI <span class="entry-org">· <a href="https://www.intuit.com">Intuit</a></span></div>
+        <ul>
+          <li>PM for AI at Mailchimp spanning classic ML and emerging agentic experiences</li>
+          <li>Defined the context architecture and evaluation frameworks that govern how Mailchimp agents reason and are measured</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">Sep 2023 – Sep 2024</div>
+      <div>
+        <div class="entry-title">Senior Product Manager, AI <span class="entry-org">· <a href="https://www.intuit.com">Intuit</a></span></div>
+        <ul>
+          <li>Owned document compression capabilities deployed across Intuit's business units</li>
+          <li>Leveraged the emergence of multi-modal LLMs to unlock improved capabilities for TurboTax document processing and enterprise-facing "<a href="https://www.intuit.com/intuitassist/">Intuit Assist</a>"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">Feb 2022 – Sep 2023</div>
+      <div>
+        <div class="entry-title">Senior Product Manager, Analytics <span class="entry-org">· <a href="https://www.intuit.com">Intuit</a></span></div>
+        <ul>
+          <li>Embedded PM within TurboTax Analytics groups supporting ML model-driven production features and offline analysis</li>
+          <li>Productionized TurboTax's first online cross-sell, churn prediction, and time estimation models</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry entry-minor">
+      <div class="entry-date">Mar 2021 – Feb 2022</div>
+      <div>
+        <div class="entry-title">Senior Product Manager, Search &amp; Personalization <span class="entry-org">· <a href="https://www.grubhub.com">Grubhub</a></span></div>
+        <ul>
+          <li>Drove development of behaviorally-driven ML models powering customer intent deduction, search response selection, and sort order</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry entry-minor">
+      <div class="entry-date">Feb 2017 – Mar 2021</div>
+      <div>
+        <div class="entry-title">Product Manager, Logistics <span class="entry-org">· <a href="https://www.grubhub.com">Grubhub</a></span></div>
+        <ul>
+          <li>Installed the company's first real-time supply/demand management system</li>
+          <li>Awarded the company's highest honor, the "Silver Platter," for quality cross-functional execution (Dec 2017)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry entry-minor">
+      <div class="entry-date">Oct 2014 – Jan 2017</div>
+      <div>
+        <div class="entry-title">Head of City Launch &amp; Territory Management <span class="entry-org">· <a href="https://www.ycombinator.com/companies/zoomer">Zoomer</a></span></div>
+        <div class="entry-blurb">Team lead responsible for establishing and maintaining large-scale food delivery logistics operations.</div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="skills">
+    <h2>Skills &amp; Interests</h2>
+    <p>Conversational fluency in French and elementary Xhosa. Enjoys humor, music, history, travel, and (Philly) sports.</p>
+  </section>
+
+</div>
